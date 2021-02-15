@@ -1,1 +1,2 @@
 Primul meu fisier de veriune si control.
+A doua line de text
