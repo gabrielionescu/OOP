@@ -1,4 +1,4 @@
-package com.company.itschool;
+package com.company.itschool.basic;
 
 public class Bloc {
     private String scara;

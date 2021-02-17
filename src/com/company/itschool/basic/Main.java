@@ -1,4 +1,6 @@
-package com.company.itschool;
+package com.company.itschool.basic;
+
+import com.company.itschool.basic.Bloc;
 
 import java.util.Scanner;
 
