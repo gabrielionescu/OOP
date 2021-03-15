@@ -1,5 +1,7 @@
 package com.company.itschool.generice;
 
+import com.company.itschool.oopstatic.User;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -22,6 +24,7 @@ public class MainParcurgere {
 //                list.remove(nume);
 
         }
+
 
         System.out.println("--------------------");
         //iterator

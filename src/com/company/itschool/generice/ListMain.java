@@ -16,7 +16,7 @@ public class ListMain {
             System.out.println(nume);
         }
 
-        list.get(3);
+        String a = list.get(3);
         // vector[20]
         List<String> linkedList =  new LinkedList<>();
 
