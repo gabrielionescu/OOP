@@ -1,5 +1,6 @@
 package com.company.itschool.gestiunetelefoane;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -47,27 +48,27 @@ public class Main {
                 Telefon telefonAles = telefoaneInregistrate[indexulTelefonulAles - 1];
                 telefonAles.addContact(contact);
             }
-            if(optiune == 3){
+            if (optiune == 3) {
                 afisareTelefoane(telefoaneInregistrate);
                 System.out.println("Alegeti telefonu: (1- 10)");
                 int indexulTelefonulAles = scanner.nextInt();
                 scanner.nextLine();
                 Telefon telefonAles = telefoaneInregistrate[indexulTelefonulAles - 1];
-                Contact[] contacts = telefonAles.getContacte();
+                ArrayList<Contact> contacts = telefonAles.getContacte();
                 afisareContacte(contacts);
 
             }
         }
     }
 
-    public static void afisareContacte(Contact[] contacts){
-        for(int i = 0 ; i  < contacts.length; i++){
-            Contact contact =  contacts[i];
-            if(contact != null){
-                String nume =  contact.getName();
-                String prenume =  contact.getPrenume();
-                String telefon =  contact.getNrTelefon();
-                System.out.println(nume + " " + prenume + " " + telefon );
+    public static void afisareContacte(ArrayList<Contact> contacts) {
+        for (int i = 0; i < contacts.size(); i++) {
+            Contact contact = contacts.get(i);
+            if (contact != null) {
+                String nume = contact.getName();
+                String prenume = contact.getPrenume();
+                String telefon = contact.getNrTelefon();
+                System.out.println(nume + " " + prenume + " " + telefon);
             }
         }
     }

@@ -10,6 +10,7 @@ public class Main {
 
         Produs[] produses = new Produs[100];
         int index = 0;
+
         while (optiune != 0) {
             System.out.println("1.Adauga fructe");
             System.out.println("2.Adauga dulciuri");
@@ -73,6 +74,18 @@ public class Main {
                 String producatorul =  produs.getProducator();
                 System.out.println(name + " pret:" + pret + " lei " + " producator:" + producatorul);
 
+                if (produs instanceof Fruct){
+                    Fruct fruct =  (Fruct) produs;
+                    System.out.println("Fructul este:" + fruct.isBio());
+                }
+                if(produs instanceof  Haine){
+                    Haine haine = (Haine) produs;
+                    System.out.println("Haina are marimea:" +  haine.getMarime());
+                }
+                if(produs instanceof  Dulciuri){
+                    Dulciuri dulciuri = (Dulciuri) produs;
+                    System.out.println("Dulciurile au gramajul" + dulciuri.getGramaj());
+                }
 
             }
         }

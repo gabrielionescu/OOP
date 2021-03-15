@@ -1,17 +1,17 @@
 package com.company.itschool.gestiunetelefoane;
 
+import java.util.ArrayList;
+
 public class Telefon {
     private String nume;
-    private Contact[] contacte = new Contact[10];
-    private int index = 0;
+    private ArrayList<Contact> contacte = new ArrayList<>();
 
     public Telefon(String nume) {
         this.nume = nume;
     }
 
     public void addContact(Contact contact){
-        this.contacte[index] =  contact;
-        this.index++;
+        contacte.add(contact);
     }
 
     public String getNume() {
@@ -22,11 +22,12 @@ public class Telefon {
         this.nume = nume;
     }
 
-    public Contact[] getContacte() {
-        return contacte;
+
+    public void setContacte(ArrayList<Contact> contacte) {
+        this.contacte = contacte;
     }
 
-    public void setContacte(Contact[] contacte) {
-        this.contacte = contacte;
+    public ArrayList<Contact> getContacte() {
+        return contacte;
     }
 }
